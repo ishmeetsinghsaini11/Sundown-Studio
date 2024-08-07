@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3 ;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav{
+    padding: 2.2vw 2.2vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-in{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-in h4{
+    padding: 10px 20px;
+    border: 1px solid #C1BCB6;
+    border-radius: 50px;
+    font-weight: 500;
+    position: relative;
+    color: #000000f6;
+    transition: all ease 0.4s;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+#nav-in h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.4s;
+    border-radius: 50%;
+}
+
+#nav-in h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-in h4 a{
+    text-decoration: none;
+    color: #000000bb;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-in h4:hover a{
+    color: white;
+}
+
+#center{
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 4vw;
+}
+
+#left h3{
+    width: 30vw;
+    font-size: 1.9vw;
+    line-height: 1.9vw;
+}
+
+#center h1{
+    font-size: 11vw;
+    text-transform: uppercase;
+    line-height: 9vw;
+    text-align: right;
+}
+
+#page1 video{
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 4vw;
+    position: relative;
+    
+}
+
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 77vh;
+}
+
+#hero-1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #FE320A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+}
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A, #fe670a);
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    background: linear-gradient(#FE320A, #fe670a);
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(55%,-3%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,30%);
+    }
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1{
+    font-size: 9vw;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.dot{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding: 4.5vw;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+
+#page2-bottom h1{
+    font-size: 4vw;
+    width: 65%;
+    line-height: 4vw;
+}
+
+#bottom-part2{
+    width: 20%;
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15vw;
+}
+
+#bottom-part2 p{
+    font-weight: 100;
+    margin-top: 2vw;
+}
+
+#page2 #gooey{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#ff2a00,#fe670a);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-timing-function: ease-in-out;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gooey {
+    from{
+        filter: blur(20px);
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    padding: 4vw 0;
+}
+
+.elem{
+    height: 125px;
+    width: 100%;
+    border-bottom: 1px solid #C1BCB6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay{
+    top: 0%;
+}
+
+#fixed-image{
+    height: 30vw;
+    width: 25vw;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 20%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#page4{
+    height: 60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+#page5{
+    height: 112vh;
+    width: 100%;
+}
+
+#footer{
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+#footer h1{
+    font-size: 23vw ;
+}
